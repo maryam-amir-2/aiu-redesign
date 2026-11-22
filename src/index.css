@@ -1,0 +1,69 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #25282D;
+  background: #F7F5EF;
+
+  --aiu-blue: #173B68;
+  --aiu-red: #A62832;
+  --aiu-ivory: #F7F5EF;
+  --aiu-charcoal: #25282D;
+  --aiu-muted: #777777;
+
+  --content-width: 1180px;
+  --content-narrow: 1050px;
+  --page-gutter: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+/* Reusable content widths */
+.section-container {
+  width: min(calc(100% - 2 * var(--page-gutter)), var(--content-width));
+  margin-inline: auto;
+}
+
+.section-container-narrow {
+  width: min(calc(100% - 2 * var(--page-gutter)), var(--content-narrow));
+  margin-inline: auto;
+}
+
+/* Better anchor positioning below the fixed navbar */
+[id] {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-gutter: 20px;
+  }
+}
