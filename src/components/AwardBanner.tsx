@@ -1,6 +1,6 @@
 
 import { motion } from 'motion/react'
-import { ArrowUpRight, Award } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 function AwardBanner() {
   return (
