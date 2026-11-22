@@ -1,9 +1,6 @@
 
 import {
   ArrowUpRight,
-  Facebook,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
 } from 'lucide-react'
@@ -46,19 +43,19 @@ function Footer() {
 
             <div className="mt-6 flex gap-3">
               {[
-                { icon: Instagram, href: 'https://www.instagram.com/' },
-                { icon: Facebook, href: 'https://www.facebook.com/' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/' },
-              ].map(({ icon: Icon, href }, index) => (
+                { label: '◎', name: 'Instagram', href: 'https://www.instagram.com/' },
+                { label: 'f', name: 'Facebook', href: 'https://www.facebook.com/' },
+                { label: 'in', name: 'LinkedIn', href: 'https://www.linkedin.com/' },
+              ].map(({ label, name, href }) => (
                 <a
-                  key={index}
+                  key={name}
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Social media ${index + 1}`}
-                  className="flex h-9 w-9 items-center justify-center border border-white/15 text-white/65 transition-all hover:border-[#A62832] hover:bg-[#A62832] hover:text-white"
+                  aria-label={name}
+                  className="flex h-9 w-9 items-center justify-center border border-white/15 text-xs font-semibold text-white/65 transition-all hover:border-[#A62832] hover:bg-[#A62832] hover:text-white"
                 >
-                  <Icon size={15} />
+                  {label}
                 </a>
               ))}
             </div>
